@@ -1,5 +1,6 @@
 ScriptName Vector_Form extends BaseObject
 ; initial commit
+;a
 
 Form[] property data auto
 
