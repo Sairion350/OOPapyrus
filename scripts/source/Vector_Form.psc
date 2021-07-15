@@ -54,6 +54,14 @@ Form Function Back()
 	return data[data.Length - 1]
 EndFunction 
 
+Vector_Form Function Copy()
+{Returns a copy of this vector}
+	Vector_Form ret = Vector_Form.NewObject()
+	ret.data = data 
+
+	return ret
+EndFunction
+
 ; ██████╗ █████╗ ██████╗  █████╗  ██████╗██╗████████╗██╗   ██╗
 ;██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██║╚══██╔══╝╚██╗ ██╔╝
 ;██║     ███████║██████╔╝███████║██║     ██║   ██║    ╚████╔╝ 
@@ -98,14 +106,6 @@ Function Reserve(int size)
 	endif 
 EndFunction
 
-
-Vector_Form Function Copy()
-{Returns a copy of this vector}
-	Vector_Form ret = Vector_Form.NewObject()
-	ret.data = data 
-
-	return ret
-EndFunction
 
 ;███╗   ███╗ ██████╗ ██████╗ ██╗███████╗██╗███████╗██████╗ ███████╗
 ;████╗ ████║██╔═══██╗██╔══██╗██║██╔════╝██║██╔════╝██╔══██╗██╔════╝
