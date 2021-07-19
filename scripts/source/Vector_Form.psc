@@ -12,7 +12,7 @@ ScriptName Vector_Form extends BaseObject
 Form[] property data auto
 
 Vector_Form Function NewObject() Global
-	Vector_Form obj = BaseObject.MakeNewObject("Vector_Form") as Vector_Form 
+	Vector_Form obj = BaseObject.Construct("Vector_Form") as Vector_Form 
 	
 	obj.Clear()
 
