@@ -307,7 +307,7 @@ EndFunction
 Bool Function Loop()
 {Use as such: "While vec.loop()" to simulate for-loop functionality}
 	iteration += 1
-	return (iteration >= data.Length)
+	return (iteration < data.Length)
 EndFunction
 
 int Function LoopPos()
