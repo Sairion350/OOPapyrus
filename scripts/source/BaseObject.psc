@@ -22,6 +22,9 @@ Function Destroy()
 EndFunction
 
 
+Function CallEvent(string eventname)
+	CallEventOnForm(self, eventname)
+EndFunction
 
 
 
@@ -36,6 +39,8 @@ EndFunction
 
 
 
+
+Function CallEventOnForm(form obj, string eventname) Global Native
 
 Function DeleteObject(form toDelete) Global Native
 
