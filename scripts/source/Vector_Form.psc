@@ -289,7 +289,7 @@ Function DestroyAll()
 		BaseObject b = i() as BaseObject
 		
 		if b
-			b.destroy()
+			b.callevent("destroy")
 		endif 
 	EndWhile
 

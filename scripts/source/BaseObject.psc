@@ -17,9 +17,9 @@ bool Function Exists()
 	return true 
 endfunction
 
-Function Destroy()
+Event Destroy()
 	DeleteObject(self as form)
-EndFunction
+EndEvent
 
 
 Function CallEvent(string eventname)
