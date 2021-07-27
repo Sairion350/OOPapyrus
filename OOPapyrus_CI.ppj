@@ -30,7 +30,6 @@
         	<Include NoRecurse="true">*.esp</Include>
             <Include>Scripts</Include>
             <Include>SKSE</Include>
-            <Include>Interface</Include>
         </ZipFile>
     </ZipFiles>
 </PapyrusProject>
