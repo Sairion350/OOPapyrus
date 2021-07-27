@@ -1,0 +1,29 @@
+<?xml version='1.0'?><!-- Game is either sse, tesv, or fo4 -->
+<PapyrusProject xmlns="PapyrusProject.xsd" 
+    Flags="TESV_Papyrus_Flags.flg" 
+    Game="sse" 
+    Output="Scripts" 
+    Optimize="true" 
+    Anonymize="true" 
+    Zip="true">
+    <Variables>
+        <Variable Name="ModName" Value="OOPapyrus"/>
+        <Variable Name="MyProject" Value="."/>
+        <Variable Name="Dist" Value="..\dist"/>
+    </Variables>
+    <Imports>
+        <Import>@MyProject\Scripts\Source</Import>
+        <Import>https://github.com/eeveelo/PapyrusUtil/tree/master/Scripts/Source</Import>
+    </Imports>
+    <Folders>
+        <Folder>@MyProject\Scripts\Source</Folder>
+    </Folders>
+    <ZipFiles Output="@Dist">
+        <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
+        	<Include NoRecurse="true">*.esp</Include>
+            <Include>Scripts</Include>
+            <Include>SKSE</Include>
+            <Include>Interface</Include>
+        </ZipFile>
+    </ZipFiles>
+</PapyrusProject>
