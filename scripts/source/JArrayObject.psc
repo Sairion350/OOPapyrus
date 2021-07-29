@@ -39,9 +39,9 @@ JArrayObject Function GetObjectJArray(int index)
 	return JArrayObject.newObject(JArray.getObj(data, index, -1))
 EndFunction
 
-;JMapObject Function GetObjectJMap(int index)
-;	return JMapObject.newObject(JArray.getObj(data, index, -1))
-;EndFunction
+JMapObject Function GetObjectJMap(int index)
+	return JMapObject.newObject(JArray.getObj(data, index, -1))
+EndFunction
 
 
 
