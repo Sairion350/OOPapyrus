@@ -16,6 +16,12 @@ JMapObject Function NewObject(int sourcejmap = -1, string sourceFile = "") Globa
 	return obj
 EndFunction 
 
+; ██████╗ ███████╗████████╗
+;██╔════╝ ██╔════╝╚══██╔══╝
+;██║  ███╗█████╗     ██║   
+;██║   ██║██╔══╝     ██║   
+;╚██████╔╝███████╗   ██║   
+; ╚═════╝ ╚══════╝   ╚═╝ 
 
 int Function GetInt(string map_key, int default = 0)
 	return JMap.getInt(data, map_key, default)
@@ -41,7 +47,16 @@ JMapObject Function GetObjectJMap(string map_key)
 	return JMapObject.newObject(JMap.getObj(data, map_key, -1))
 EndFunction
 
+int Function GetObjectRaw(string map_key)
+	return jmap.getObj(data, map_key, -1)
+EndFunction
 
+;███████╗███████╗████████╗
+;██╔════╝██╔════╝╚══██╔══╝
+;███████╗█████╗     ██║   
+;╚════██║██╔══╝     ██║   
+;███████║███████╗   ██║   
+;╚══════╝╚══════╝   ╚═╝   
 
 Function SetInt(string map_key, int value)
 	JMap.setInt(data, map_key, value)
@@ -63,7 +78,26 @@ Function SetObject(string map_key, jvalueobject value)
 	JMap.setObj(data, map_key, value.data)
 EndFunction
 
+;██╗███╗   ██╗██╗  ██╗███████╗██████╗ ██╗████████╗███████╗██████╗ 
+;██║████╗  ██║██║  ██║██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██╔══██╗
+;██║██╔██╗ ██║███████║█████╗  ██████╔╝██║   ██║   █████╗  ██║  ██║
+;██║██║╚██╗██║██╔══██║██╔══╝  ██╔══██╗██║   ██║   ██╔══╝  ██║  ██║
+;██║██║ ╚████║██║  ██║███████╗██║  ██║██║   ██║   ███████╗██████╔╝
+;╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝╚═════╝ 
+                                                                 
 
+;int Function Count() / int Function Size()
+
+;bool Function Empty()
+
+;Function Clear()
+
+;███╗   ███╗██╗███████╗ ██████╗
+;████╗ ████║██║██╔════╝██╔════╝
+;██╔████╔██║██║███████╗██║     
+;██║╚██╔╝██║██║╚════██║██║     
+;██║ ╚═╝ ██║██║███████║╚██████╗
+;╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝
 
 int Function ValueType(string map_key)
 	return jmap.ValueType(data, map_key)

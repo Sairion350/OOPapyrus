@@ -17,7 +17,13 @@ JArrayObject Function NewObject(int jarr = -1, string sourceFile = "") Global
 	return obj
 EndFunction 
 
-
+; ██████╗ ███████╗████████╗
+;██╔════╝ ██╔════╝╚══██╔══╝
+;██║  ███╗█████╗     ██║   
+;██║   ██║██╔══╝     ██║   
+;╚██████╔╝███████╗   ██║   
+; ╚═════╝ ╚══════╝   ╚═╝   
+                          
 
 int Function GetInt(int index, int default = 0)
 	return JArray.getInt(data, index, default)
@@ -43,7 +49,17 @@ JMapObject Function GetObjectJMap(int index)
 	return JMapObject.newObject(JArray.getObj(data, index, -1))
 EndFunction
 
+int Function GetObjectRaw(int index)
+	return jarray.getObj(data, index, -1)
+EndFunction
 
+;███████╗███████╗████████╗
+;██╔════╝██╔════╝╚══██╔══╝
+;███████╗█████╗     ██║   
+;╚════██║██╔══╝     ██║   
+;███████║███████╗   ██║   
+;╚══════╝╚══════╝   ╚═╝   
+                         
 
 Function SetInt(int index, int value)
 	JArray.setInt(data, index, value)
@@ -65,7 +81,27 @@ Function SetObject(int index, jvalueobject value)
 	JArray.setObj(data, index, value.data)
 EndFunction
 
+;██╗███╗   ██╗██╗  ██╗███████╗██████╗ ██╗████████╗███████╗██████╗ 
+;██║████╗  ██║██║  ██║██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██╔══██╗
+;██║██╔██╗ ██║███████║█████╗  ██████╔╝██║   ██║   █████╗  ██║  ██║
+;██║██║╚██╗██║██╔══██║██╔══╝  ██╔══██╗██║   ██║   ██╔══╝  ██║  ██║
+;██║██║ ╚████║██║  ██║███████╗██║  ██║██║   ██║   ███████╗██████╔╝
+;╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝╚═════╝ 
+                                                                 
 
+;int Function Count() / int Function Size()
+
+;bool Function Empty()
+
+;Function Clear()
+
+;███████╗██╗███╗   ██╗██████╗ 
+;██╔════╝██║████╗  ██║██╔══██╗
+;█████╗  ██║██╔██╗ ██║██║  ██║
+;██╔══╝  ██║██║╚██╗██║██║  ██║
+;██║     ██║██║ ╚████║██████╔╝
+;╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ 
+                             
 
 int Function FindInt(int value)
 	return JArray.findInt(data, value)
@@ -87,7 +123,13 @@ int Function FindObject(jvalueobject value)
 	return JArray.findInt(data, value.data)
 EndFunction
 
-
+; ██████╗ ██████╗ ██╗   ██╗███╗   ██╗████████╗
+;██╔════╝██╔═══██╗██║   ██║████╗  ██║╚══██╔══╝
+;██║     ██║   ██║██║   ██║██╔██╗ ██║   ██║   
+;██║     ██║   ██║██║   ██║██║╚██╗██║   ██║   
+;╚██████╗╚██████╔╝╚██████╔╝██║ ╚████║   ██║   
+; ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   
+                                             
 
 int Function CountInt(int value)
 	return JArray.countInteger(data, value)
@@ -109,7 +151,13 @@ int Function CountObject(jvalueobject value)
 	return JArray.countInteger(data, value.data)
 EndFunction
 
-
+;██████╗ ██╗   ██╗███████╗██╗  ██╗
+;██╔══██╗██║   ██║██╔════╝██║  ██║
+;██████╔╝██║   ██║███████╗███████║
+;██╔═══╝ ██║   ██║╚════██║██╔══██║
+;██║     ╚██████╔╝███████║██║  ██║
+;╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝
+                                 
 
 Function PushInt(int value)
 	JArray.addInt(data, value)
@@ -131,7 +179,13 @@ Function PushObject(jvalueobject value)
 	JArray.addObj(data, value.data)
 EndFunction
 
-
+;██╗███╗   ██╗███████╗███████╗██████╗ ████████╗
+;██║████╗  ██║██╔════╝██╔════╝██╔══██╗╚══██╔══╝
+;██║██╔██╗ ██║███████╗█████╗  ██████╔╝   ██║   
+;██║██║╚██╗██║╚════██║██╔══╝  ██╔══██╗   ██║   
+;██║██║ ╚████║███████║███████╗██║  ██║   ██║   
+;╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                              
 
 Function InsertInt(int at, int value)
 	JArray.addInt(data, value, at)
@@ -153,7 +207,13 @@ Function InsertObject(int at, jvalueobject value)
 	JArray.addObj(data, value.data, at)
 EndFunction
 
-
+;███████╗██████╗  █████╗ ███████╗███████╗
+;██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
+;█████╗  ██████╔╝███████║███████╗█████╗  
+;██╔══╝  ██╔══██╗██╔══██║╚════██║██╔══╝  
+;███████╗██║  ██║██║  ██║███████║███████╗
+;╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
+                                        
 
 int Function EraseInt(int value)
 	return JArray.eraseinteger(data, value)
@@ -175,6 +235,14 @@ int Function EraseObject(jvalueobject value)
 	return JArray.eraseObject(data, value.data)
 EndFunction
 
+; ██████╗ █████╗ ███████╗████████╗
+;██╔════╝██╔══██╗██╔════╝╚══██╔══╝
+;██║     ███████║███████╗   ██║   
+;██║     ██╔══██║╚════██║   ██║   
+;╚██████╗██║  ██║███████║   ██║   
+; ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   
+                                 
+
 int[] Function asIntArray()
 	return JArray.asIntArray(data)
 EndFunction
@@ -191,7 +259,13 @@ form[] Function asFormArray()
 	return JArray.asFormArray(data)
 EndFunction
 
-
+;███╗   ███╗██╗███████╗ ██████╗
+;████╗ ████║██║██╔════╝██╔════╝
+;██╔████╔██║██║███████╗██║     
+;██║╚██╔╝██║██║╚════██║██║     
+;██║ ╚═╝ ██║██║███████║╚██████╗
+;╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝
+                              
 
 int Function ValueType(int index)
 	return JArray.ValueType(data, index)
