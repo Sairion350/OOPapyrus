@@ -18,6 +18,7 @@ JArrayObject Function NewObject(int jarr = -1, string sourceFile = "") Global
 EndFunction 
 
 
+
 int Function GetInt(int index, int default = 0)
 	return JArray.getInt(data, index, default)
 EndFunction
@@ -43,6 +44,7 @@ EndFunction
 ;EndFunction
 
 
+
 Function SetInt(int index, int value)
 	JArray.setInt(data, index, value)
 EndFunction
@@ -64,6 +66,7 @@ Function SetObject(int index, jvalueobject value)
 EndFunction
 
 
+
 int Function FindInt(int value)
 	return JArray.findInt(data, value)
 EndFunction
@@ -83,6 +86,7 @@ EndFunction
 int Function FindObject(jvalueobject value)
 	return JArray.findInt(data, value.data)
 EndFunction
+
 
 
 int Function CountInt(int value)
@@ -128,6 +132,7 @@ Function PushObject(jvalueobject value)
 EndFunction
 
 
+
 Function InsertInt(int at, int value)
 	JArray.addInt(data, value, at)
 EndFunction
@@ -170,8 +175,48 @@ int Function EraseObject(jvalueobject value)
 	return JArray.eraseObject(data, value.data)
 EndFunction
 
+int[] Function asIntArray()
+	return JArray.asIntArray(data)
+EndFunction
+
+float[] Function asFloatArray()
+	return JArray.asFloatArray(data)
+EndFunction
+
+string[] Function asStringArray()
+	return JArray.asStringArray(data)
+EndFunction
+
+form[] Function asFormArray()
+	return JArray.asFormArray(data)
+EndFunction
+
 
 
 int Function ValueType(int index)
 	return JArray.ValueType(data, index)
+EndFunction
+
+Function Swap(int index1, int index2)
+	JArray.swapItems(data, index1, index2)
+EndFunction
+
+Function Sort()
+	JArray.sort(data)
+endfunction
+
+Function Unique()
+	JArray.unique(data)
+endfunction
+
+Function Reverse()
+	JArray.reverse(data)
+EndFunction
+
+JArrayObject Function Copy()
+	return jarrayobject.NewObject(JValue.deepCopy(data))
+EndFunction
+
+Function Merge(JArrayObject other)
+	JArray.addFromArray(data, other.data)
 EndFunction
