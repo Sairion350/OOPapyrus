@@ -282,8 +282,8 @@ String Function asString()
 	return data as string
 EndFunction
 
-Function DestroyAll()
-{Destroy all BaseObjects stored in the vector, then destroy this vector}
+Function DestroyElements()
+{Destroy all BaseObjects stored in the vector}
 	ResetLooping()
 	While Loop()
 		BaseObject b = i() as BaseObject
@@ -292,10 +292,13 @@ Function DestroyAll()
 			b.callevent("destroy")
 		endif 
 	EndWhile
-
-	Parent.Destroy()
 EndFunction
 
+Function DestroyAll()
+{Destroy all BaseObjects stored in the vector, then destroy this vector}
+	DestroyElements()
+	Parent.Destroy()
+EndFunction
 
 int iteration 
 
