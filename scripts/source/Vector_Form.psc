@@ -163,9 +163,10 @@ Form Function Pop_back()
 	return ret
 EndFunction
 
-Function Push_back(Form push)
-{Add the given form the back of the array}
+Form Function Push_back(Form push)
+{Add the given form to the back of the array, then return it}
 	data = PapyrusUtil.PushForm(data, push)
+	return push
 EndFunction
 
 Function Swap(Vector_Form other)
